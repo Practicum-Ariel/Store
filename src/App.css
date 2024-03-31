@@ -1,5 +1,4 @@
 #root {
-  max-width: 1280px;
   /* margin: 0 auto; */
   padding: 2rem;
   text-align: center;
@@ -34,11 +33,8 @@
 }
 
 .card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  padding: 1em;
+  width: 250px;
 }
 
 .layout{
@@ -47,11 +43,11 @@
 }
 
 .content{
-  width: 70%;
+  width: 80%;
 }
 .cart{
   float: left;
-  width: 30%;
+  width: 20%;
   /* width: 400px; */
   border: 1px solid;
 }
