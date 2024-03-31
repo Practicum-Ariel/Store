@@ -1,0 +1,37 @@
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.task {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.task input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.task label {
+    flex-grow: 1;
+}
+
+.deadline {
+    color: #999;
+    font-size: 0.9em;
+    margin-left: 30px;
+}
