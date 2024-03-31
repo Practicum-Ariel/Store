@@ -1,28 +1,22 @@
 import { useState } from 'react'
 
-export default function AddToCart({setTotal}) {
-
-    const [counter, setCounter] = useState(0) // const counter = 1
-    //      state  , setState
-
+export default function AddToCart({setTotal,amount = 0}) {
 
     const handlePlus = () => {
-        setCounter(counter + 1)
-        setTotal(prev=>prev+1)
+        // setCounter(counter + 1)
     }
     const handleMinus = () => {
-        setCounter(counter - 1)
-        setTotal(prev=>prev-1)
+        // setCounter(counter - 1)
     }
 
 
     return (
         <>
             {
-                counter > 0 ?
+                amount > 0 ?
                     <>
                         <button onClick={handlePlus}>+</button>
-                        <span>{counter}</span>
+                        <span>{amount}</span>
                         <button onClick={handleMinus}>-</button>
                     </>
                     :

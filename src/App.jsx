@@ -1,14 +1,9 @@
 import './App.css'
-import ItemList from './ItemList'
-
-
+import Layout from './Layout'
 
 function App() {
-
 return <div>
-
- 
-    <ItemList/>
+    <Layout/>
   </div>
 }
 
