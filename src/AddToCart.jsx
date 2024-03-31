@@ -1,9 +1,11 @@
 import { useState } from 'react'
 
-export default function AddToCart({setTotal,amount = 0}) {
+export default function AddToCart({setCart,cart,barcode,amount = 0}) {
 
     const handlePlus = () => {
         // setCounter(counter + 1)
+        cart[barcode].amount+=1
+        setCart(cart)
     }
     const handleMinus = () => {
         // setCounter(counter - 1)
