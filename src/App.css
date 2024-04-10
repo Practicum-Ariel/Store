@@ -70,6 +70,12 @@
   height: 140px;
 
 }
+.card-click{
+  cursor: pointer;
+}
+.card-click:hover{
+  border: 1px solid;
+}
 
 .cart-details{
   display: flex;

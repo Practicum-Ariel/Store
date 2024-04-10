@@ -1,6 +1,11 @@
+import { useContext } from "react";
+import DataContext from "./context/DataContext";
 
-export default function AddToCart({ setCart, cart, item, style }) {
+export default function AddToCart({ item, style }) {
+
     let { barcode } = item || {};
+    const {cart,setCart} = useContext(DataContext)
+    
     const handlePlus = () => {
         // let item = { ...cart[barcode] }
         // item.amount += 1

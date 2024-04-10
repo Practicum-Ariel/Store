@@ -3,7 +3,7 @@ import Item from './Item'
 import itemsDB, { categories } from './db.items'
 import Search from './Search'
 
-export default function ItemList({cart, setCart}) {
+export default function ItemList({setSelected}) {
 
     const [search, setSearch] = useState("")
     const [category, setCategory] = useState("all")
@@ -21,7 +21,7 @@ export default function ItemList({cart, setCart}) {
                 <Search onInput={handleSearch} />
             </div>
             <div className='items'>
-                {filtered.map(it => <Item key={it.barcode} item={it} cart={cart} setCart={setCart}/>)}
+                {filtered.map(it => <Item setSelected={setSelected} key={it.barcode} item={it}/>)}
             </div>
         </div>
     )

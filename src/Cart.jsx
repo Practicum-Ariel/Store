@@ -1,20 +1,20 @@
+import { useContext } from "react"
 import CartList from "./CartList"
 import Total from "./Total"
+import DataContext from "./context/DataContext"
 
 
 
 
-export default function Cart({cart, setCart}) {
+export default function Cart() {
 
-
-    let total = 0
-    Object.keys(cart).forEach(c=>total += (cart[c].amount * cart[c].price))
-    
+    const  {setCart} =useContext(DataContext);
+       
     return (
         <div className="cart">
             <button onClick={()=>setCart([])}>❌</button>
-            <CartList cart={cart} setCart={setCart} />
-            <Total total={total}/>
+            <CartList />
+            <Total/>
 
         </div>
     )
