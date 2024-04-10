@@ -1,10 +1,9 @@
-import { useContext } from 'react';
 import AddToCart from './AddToCart'
-import DataContext from './context/DataContext';
+import useMyContext from './context/DataContext';
 
 export default function CartItem({ item}) {
   let { barcode, name, emoji, price, amount } = item;
-  const {cart,setCart} = useContext(DataContext)
+  const {cart,setCart} = useMyContext()
 
   const handleDelete = () => {
     let cloneCart = { ...cart }
@@ -15,7 +14,7 @@ export default function CartItem({ item}) {
   return (
     <div className='cart-item'>
       <button onClick={handleDelete}>✖</button>
-      <AddToCart amount={amount} item={item} style={{ display: "flex", "align-items": "center", "flex-direction": "column" }} />
+      <AddToCart amount={amount} item={item} style={{ display: "flex", "alignItems": "center", "flexDirection": "column" }} />
       <div className='cart-details'>
         <div>{name}</div>
         <div>{price}$</div>

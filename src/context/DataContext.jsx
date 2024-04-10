@@ -1,6 +1,9 @@
-import  { createContext} from 'react'
+import  { createContext, useContext} from 'react'
 
-const DataContext = createContext("❌❌❌❌")
+export const DataContext = createContext("❌❌❌❌")
 
-export default DataContext;
+function useMyContext (){
+    return useContext(DataContext)
+}
+export default useMyContext;
 

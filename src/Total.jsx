@@ -1,9 +1,9 @@
 import  { useContext } from 'react'
-import DataContext from './context/DataContext';
+import useMyContext from './context/DataContext';
 
 export default function Total() {
 
-  const  {cart} =useContext(DataContext);
+  const  {cart} =useMyContext();
   let total = 0
   Object.keys(cart).forEach(c=>total += (cart[c].amount * cart[c].price))
 

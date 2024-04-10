@@ -1,9 +1,8 @@
-import { useContext } from "react";
 import CartItem from "./CartItem";
-import DataContext from "./context/DataContext";
+import useMyContext from "./context/DataContext";
 
 export default function CartList() {
-  const {cart} = useContext(DataContext)
+  const {cart} = useMyContext()
   return (
     <div>
         {Object.keys(cart).map(c=><CartItem key={cart[c].barcode} item={cart[c]}/>)}

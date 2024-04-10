@@ -1,10 +1,9 @@
-import { useContext } from "react";
-import DataContext from "./context/DataContext";
+import useMyContext from "./context/DataContext";
 
 export default function AddToCart({ item, style }) {
 
     let { barcode } = item || {};
-    const {cart,setCart} = useContext(DataContext)
+    const {cart,setCart} = useMyContext()
     
     const handlePlus = () => {
         // let item = { ...cart[barcode] }

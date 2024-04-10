@@ -1,14 +1,13 @@
-import { useContext } from "react"
 import CartList from "./CartList"
 import Total from "./Total"
-import DataContext from "./context/DataContext"
+import useMyContext from "./context/DataContext";
 
 
 
 
 export default function Cart() {
 
-    const  {setCart} =useContext(DataContext);
+    const  {setCart} =useMyContext();
        
     return (
         <div className="cart">
