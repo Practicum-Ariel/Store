@@ -2,7 +2,6 @@ import useMyContext from './context/DataContext'
 
 export default function Popup() {
     const { popup, setPopup } = useMyContext()
-
     return <div
         className='overlay'
         onClick={() => setPopup()}>
