@@ -20,7 +20,7 @@ export default function CartItem({ item}) {
         <div>{price}$</div>
       </div>
       <div className='emoji'>
-        <h1>{emoji}</h1>
+        <h2>{emoji}</h2>
       </div>
     </div>
   )
