@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Navigate, Outlet } from 'react-router-dom'
 
 export default function CategoryLayout() {
   const [isConnected, setIsConnected] = useState(true)
@@ -12,7 +12,9 @@ export default function CategoryLayout() {
           <Outlet />
           {/* <footer>category footer</footer> */}
         </>
-        : <button onClick={() => setIsConnected(true)}>connect</button>}
+        : <Navigate to={'/'} />}
+        
+        {/* <button onClick={() => setIsConnected(true)}>connect</button>} */}
     </>
   )
 }

@@ -1,10 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import useMyContext from "./context/DataContext";
 
 export default function AddToCart({ item, style }) {
-
+    const navigate = useNavigate()
     let { barcode } = item || {};
-    const {cart,setCart} = useMyContext()
-    
+    const { cart, setCart } = useMyContext()
+
     const handlePlus = () => {
         // let item = { ...cart[barcode] }
         // item.amount += 1
@@ -13,7 +14,13 @@ export default function AddToCart({ item, style }) {
         if (copied[barcode]) copied[barcode].amount += 1
         else copied[barcode] = { ...item, amount: 1 }
         setCart(copied)
+        // to navigate with code instead link
+        // if (item.inStock > 0) {   
+        //     navigate('/', { state: {} })
+        // }
+        // navigate(-1, { state: {} })
     }
+
     const handleMinus = () => {
         let copied = { ...cart }
         copied[barcode].amount -= 1

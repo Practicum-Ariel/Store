@@ -9,6 +9,7 @@ export default function ItemList() {
     const { categoryName } = useParams()
     const [searchParams, setSearchParams] = useSearchParams()
     const [search, setSearch] = useState(searchParams.get('search') || "")
+    
     let filtered = categoryName === "all" ? itemsDB : itemsDB.filter(v => v.category === categoryName)
     filtered = filtered.filter(it => it.name.toLowerCase().includes(search))
 
