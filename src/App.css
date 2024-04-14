@@ -1,13 +1,39 @@
 #root {
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
 }
+
+/* a {
+  color: inherit;
+} */
 
 .card {
   padding: 1em;
   width: 250px;
 }
 
+/* header */
+.header{
+  height: 50px;
+  background-color: #ebebeb;
+  display: flex;
+  align-items: center;
+}
+
+.header nav{
+  display: flex;
+  gap: 2rem;
+  font-size: 1.3rem;
+}
+
+.header nav a.isActive{
+  color: orange;
+}
+
+
+
+
+/* layout */
 .layout {
   display: flex;
   flex-direction: row;

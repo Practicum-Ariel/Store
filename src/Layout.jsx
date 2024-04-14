@@ -1,13 +1,9 @@
 import { useEffect, useState } from 'react'
 import Cart from './Cart'
 import Content from './Content'
+import Popup from './Popup'
 import { DataContext } from './context/DataContext'
 import Header from './Header'
-import Popup from './Popup'
-import { Route, Routes } from 'react-router-dom'
-import NotFound from './NotFound'
-import ItemsByCategory from './ItemsByCategory'
-import Categories from './Categories'
 
 export default function Layout() {
   const [cart, setCart] = useState({})
@@ -23,15 +19,15 @@ export default function Layout() {
 
 
   return (
-    <div className='layout'>
-      {/* <Header /> */}
-
-      <DataContext.Provider value={{ cart, setCart, popup, setPopup }}>
-        <Cart />
-        <Content />
-        {popup && <Popup />}
-      </DataContext.Provider>
-
-    </div>
+    <>
+      <Header />
+      <div className='layout'>
+        <DataContext.Provider value={{ cart, setCart, popup, setPopup }}>
+          <Cart />
+          <Content />
+          {popup && <Popup />}
+        </DataContext.Provider>
+      </div>
+    </>
   )
 }
