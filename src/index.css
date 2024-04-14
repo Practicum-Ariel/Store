@@ -61,3 +61,8 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+input {
+  font-size: 1.2rem;
+  padding: .2rem .4rem;
+}
