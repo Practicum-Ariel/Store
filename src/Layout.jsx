@@ -4,6 +4,10 @@ import Content from './Content'
 import { DataContext } from './context/DataContext'
 import Header from './Header'
 import Popup from './Popup'
+import { Route, Routes } from 'react-router-dom'
+import NotFound from './NotFound'
+import ItemsByCategory from './ItemsByCategory'
+import Categories from './Categories'
 
 export default function Layout() {
   const [cart, setCart] = useState({})
@@ -17,9 +21,11 @@ export default function Layout() {
     localStorage.cart = JSON.stringify(cart)
   }, [cart])
 
+
   return (
     <div className='layout'>
       {/* <Header /> */}
+
       <DataContext.Provider value={{ cart, setCart, popup, setPopup }}>
         <Cart />
         <Content />

@@ -43,9 +43,10 @@
 .layout {
   display: flex;
   flex-direction: row;
+  min-height: 100%;
 }
 
-.content {
+.right {
   width: 80%;
 }
 
@@ -72,6 +73,7 @@
 }
 .card-click{
   cursor: pointer;
+  border: 1px solid transparent;
 }
 .card-click:hover{
   border: 1px solid;
@@ -125,4 +127,10 @@
   background-color: white;
   padding: 10px;
   border-radius: 10px;
+}
+
+.categories{
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
 }
