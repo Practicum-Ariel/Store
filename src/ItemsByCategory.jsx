@@ -8,9 +8,6 @@ export default function ItemsByCategory() {
    // TODO - get all the items by category using filter
 
    return (
-      <div>
-         {categoryName}
       <ItemList />
-      </div>
    )
 }
