@@ -2,12 +2,12 @@ import AddToCart from './AddToCart'
 import useMyContext from './context/DataContext';
 
 export default function CartItem({ item}) {
-  let { barcode, name, emoji, price, amount } = item;
+  let { id, name, emoji, price, amount } = item;
   const {cart,setCart} = useMyContext()
 
   const handleDelete = () => {
     let cloneCart = { ...cart }
-    delete cloneCart[barcode]
+    delete cloneCart[id]
     setCart(cloneCart)
   }
 

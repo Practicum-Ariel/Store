@@ -6,7 +6,7 @@ export default function CartList() {
 
   return (
     <div>
-      {Object.keys(cart).map(c => <CartItem key={cart[c].barcode} item={cart[c]} />)}
+      {Object.keys(cart).map(c => <CartItem key={cart[c].id} item={cart[c]} />)}
     </div>
   )
 }

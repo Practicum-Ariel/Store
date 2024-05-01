@@ -15,16 +15,15 @@ export default function Content() {
       <Routes>
         <Route index element={<Categories />} />
         {/* route with params */}
-        <Route path='category/:categoryName' element={<CategoryLayout/> }  >
+        <Route path='category/:categoryName' element={<CategoryLayout />}  >
           <Route index element={<ItemList />} />
           <Route path='edit' element={<>edit category</>} />
-          <Route path=':itemId' >
-            {/* TODO - in item id page to see only the item with the current id */}
-            <Route index element={<SingleItem/>} />
-            <Route path='edit' element={<>edit item</>} />
-          </Route>
         </Route>
-        <Route path='create-item' element={<CreateItem/>} />
+        <Route path='item/:itemId' >
+          <Route index element={<SingleItem />} />
+          <Route path='edit' element={<>edit item</>} />
+        </Route>
+        <Route path='create-item' element={<CreateItem />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>

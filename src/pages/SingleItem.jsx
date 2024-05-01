@@ -1,13 +1,18 @@
-import { useLocation, useParams } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
 import AddToCart from '../AddToCart';
-import items from '../db.items';
+import { useEffect, useState } from 'react';
 
 export default function SingleItem() {
   const { itemId } = useParams()
-  const { state } = useLocation()
-  const item = state || items.find(it => it.barcode === itemId) || {}
+  const [item,setItem] = useState({})
 
-  let { barcode, name, emoji, price } = item;
+  useEffect(()=>{
+    fetch('https://jbh-mockserver.onrender.com/items/'+itemId)
+    .then(res => res.json())
+    .then(data=>setItem(data))
+},[])
+
+  let { id, name, emoji, price } = item;
 
   return (
     <div className='single-item'>
